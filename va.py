@@ -33,7 +33,6 @@ def listen():
         say("sorry there is an error because of your stupidity")
     return command
 def run_AI():
-    global nickname
     command = listen()
     if "how are you" in command:
         say("fine\n thanks")
