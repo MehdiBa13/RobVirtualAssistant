@@ -1,19 +1,19 @@
 # imports
 import speech_recognition as sr
-import pyttsx3
+import pyttsx3 as pytt
 import datetime
 import pywhatkit
 import wikipedia
 import pyjokes
 # Configuring speech_recognition and pyttsx3
 listener = sr.Recognizer()
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[2].id)
+sp = pytt.init()
+voices = sp.getProperty('voices')
+sp.setProperty('voice', voices[2].id)
 # functions
 def say(text):
-    engine.say(text)
-    engine.runAndWait()
+    sp.say(text)
+    sp.runAndWait()
 say("Hey\n, My name is Rob")
 say(f"I can tell u an information about someone or something\nOr tell u jokes\n"
     f"and play a song for you\nor tell u the time.")
@@ -21,8 +21,7 @@ def listen():
     try:
         with sr.Microphone() as source:
             print('listening...')
-            engine.say('listening...')
-            engine.runAndWait()
+            say('listening...')
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
