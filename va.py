@@ -16,7 +16,7 @@ def say(text):
     sp.runAndWait()
 say("Hey\n, My name is Rob")
 say(f"I can tell u an information about someone or something\nOr tell u jokes\n"
-    f"and play a song for you\nor tell u the time.")
+    f"and play a song for you\nor tell u the time\nand other things.")
 def listen():
     try:
         with sr.Microphone() as source:
