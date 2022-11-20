@@ -25,7 +25,7 @@ def listen():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'alexa' in command:
+            if 'rob' in command:
                 command = command.replace('alexa', '')
                 print(command)
     except:
