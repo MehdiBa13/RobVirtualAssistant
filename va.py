@@ -5,7 +5,7 @@ import datetime
 import pywhatkit
 import wikipedia
 import pyjokes
-# Configuring speech_recognition and pyttsx3
+# Variables
 listener = sr.Recognizer()
 sp = pytt.init()
 voices = sp.getProperty('voices')
@@ -31,7 +31,7 @@ def listen():
     except:
         say("sorry there is an error because of your stupidity")
     return command
-def run_AI():
+def run_VA():
     command = listen()
     if "how are you" in command:
         say("fine\n thanks")
@@ -72,4 +72,5 @@ def run_AI():
         print("Please say the command again.")
         say('Please say the command again.')
 # Running
-run_AI()
+if __name__ == '__main__':
+    run_VA()
