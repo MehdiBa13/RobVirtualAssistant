@@ -26,7 +26,7 @@ def listen():
             command = listener.recognize_google(voice)
             command = command.lower()
             if 'rob' in command:
-                command = command.replace('alexa', '')
+                command = command.replace('rob', '')
                 print(command)
     except:
         say("sorry there is an error because of your stupidity")
@@ -38,7 +38,7 @@ def run_VA():
     elif "you're stupid" in command:
         say("I'm not the only one, cuz you're the most stupid person ever!")
     elif "who are you" in command:
-        say("I'm alexa")
+        say("I'm Rob")
     elif ['hey', 'hi', 'hello'] in command:
         say("Hello")
     elif "i hate you" in command:
